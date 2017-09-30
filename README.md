@@ -1,5 +1,6 @@
 # X-ray App
-[brief description of the app]
+
+It's just a demo app from the Zendesk website. That's all.
 
 ### The following information is displayed:
 
