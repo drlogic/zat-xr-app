@@ -13,8 +13,8 @@ function showInfo(data) {
   var requester_data = {
     'name': data.user.name,
     'tags': data.user.tags,
-    'created_at': data.user.created_at,
-    'last_login_at': data.user.last_login_at
+    'created_at': formatDate(data.user.created_at),
+    'last_login_at': formatDate(data.user.last_login_at)
   };
 
   var source = $("#requester-template").html();
@@ -23,10 +23,10 @@ function showInfo(data) {
   $("#content").html(html);
 }
 
-function showError() {
+function showError(response) {
   var error_data = {
-    'status': 404,
-    'statusText': 'Not found'
+    'status': response.status,
+    'statusText': response.statusText
   };
   var source = $("#error-template").html();
   var template = Handlebars.compile(source);
@@ -49,4 +49,15 @@ function requestUserInfo(client, id) {
       showError(response);
     }
   );
+}
+
+function formatDate(date) {
+  var cdate = new Date(date);
+  var options = {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  };
+  date = cdate.toLocaleDateString("en-us", options);
+  return date;
 }
