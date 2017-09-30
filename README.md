@@ -1,5 +1,4 @@
-# App name
-
+# X-ray App
 [brief description of the app]
 
 ### The following information is displayed:
