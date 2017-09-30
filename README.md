@@ -2,10 +2,6 @@
 
 It's just a demo app from the Zendesk website. That's all.
 
-Adding a change to try and create a pull request (don't know what I'm talking about!!).
-
-I'm diverging from the branch?!
-
 ### The following information is displayed:
 
 * info1
